@@ -1,0 +1,16 @@
+<p>author-list works!</p>
+<div *ngFor="let item of authors" class="row" style="margin-top: 10px;">
+  <div class="col-md-1" style="background-color: burlywood; text-align: center; font-size: 20px; color: darkgreen;">
+    {{item.id}}
+  </div>
+  <div class="col-md-6" style="text-align: center;">
+    {{item.firstName}} {{item.lastName}}
+  </div>
+  <div class="col-md-2" style="text-align: center;">
+    <a routerLink="/details" routerLinkActive="active"> <input type="submit" value="Details" class="btn btn-primary">
+    </a>
+   </div>
+  <div class="col-md-2" style="text-align: center;">
+    <input type="submit" value="Delete" class="btn btn-danger" (click)="OnDelete(item)">
+  </div>
+</div>
